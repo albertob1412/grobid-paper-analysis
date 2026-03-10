@@ -3,13 +3,15 @@
   "@type": "SoftwareSourceCode",
   "name": "Open Science and AI - Text Analysis Pipeline",
   "description": "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports.",
-  "identifier": "os-ai-text-analysis",
+  "identifier": "https://doi.org/10.5281/zenodo.18941890",
   "codeRepository": "https://github.com/albertob1412/Open_science_and_AI",
   "issueTracker": "https://github.com/albertob1412/Open_science_and_AI/issues",
+  "downloadUrl": "https://github.com/albertob1412/Open_science_and_AI/releases",
   "license": "https://spdx.org/licenses/Apache-2.0",
   "version": "1.0.0",
   "dateCreated": "2025-03-10",
   "dateModified": "2025-03-10",
+  "datePublished": "2025-03-10",
   "programmingLanguage": [
     "Python"
   ],
@@ -23,7 +25,7 @@
     {
       "@type": "Person",
       "givenName": "Alberto",
-      "familyName": "Barrachina",
+      "familyName": "Barranquero",
       "affiliation": {
         "@type": "Organization",
         "name": "Universidad Politecnica de Madrid"
@@ -36,7 +38,8 @@
     "grobid",
     "research software",
     "word cloud",
-    "pdf analysis"
+    "pdf analysis",
+    "FAIR"
   ],
   "softwareRequirements": [
     "Python >= 3.11",
@@ -47,5 +50,7 @@
     "lxml",
     "pytest"
   ],
-  "readme": "https://github.com/albertob1412/Open_science_and_AI/blob/main/README.md"
+  "readme": "https://github.com/albertob1412/Open_science_and_AI/blob/main/README.md",
+  "developmentStatus": "active",
+  "referencePublication": "https://doi.org/10.5281/zenodo.18941890"
 }
