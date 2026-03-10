@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Open Science and AI - Text Analysis Pipeline"
+authors:
+  - family-names: "Barrachina"
+    given-names: "Alberto"
+    orcid: ""
+repository-code: "https://github.com/albertob1412/Open_science_and_AI"
+license: Apache-2.0
+version: "1.0.0"
+date-released: "2025-03-10"
+abstract: "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports."
+keywords:
+  - open science
+  - text analysis
+  - grobid
+  - research software
+  - python
