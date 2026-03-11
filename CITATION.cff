@@ -1,21 +1,18 @@
+title: "Open Science and AI - Text Analysis Pipeline"
+license: Apache-2.0
+authors:
+  - family-names: Barranquero
+    given-names: Alberto
+    affiliation: "Universidad Politecnica de Madrid"
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-type: software
-title: "Open Science and AI - Text Analysis Pipeline"
-authors:
-  - family-names: "Barranquero"
-    given-names: "Alberto"
-    affiliation: "Universidad Politecnica de Madrid"
-repository-code: "https://github.com/albertob1412/grobid-paper-analysis"
-license: Apache-2.0
 version: "1.0.0"
 doi: "10.5281/zenodo.18965657"
 date-released: "2025-03-10"
-abstract: "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports."
+repository-code: "https://github.com/albertob1412/grobid-paper-analysis"
 keywords:
   - open science
   - text analysis
   - grobid
   - research software
-  - python
   - FAIR
