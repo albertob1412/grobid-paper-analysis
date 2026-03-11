@@ -6,10 +6,10 @@ authors:
   - family-names: "Barranquero"
     given-names: "Alberto"
     affiliation: "Universidad Politecnica de Madrid"
-repository-code: "https://github.com/albertob1412/Open_science_and_AI"
+repository-code: "https://github.com/albertob1412/grobid-paper-analysis"
 license: Apache-2.0
 version: "1.0.0"
-doi: ""
+doi: "10.5281/zenodo.18965657"
 date-released: "2025-03-10"
 abstract: "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports."
 keywords:

@@ -1,5 +1,6 @@
 # Open Science and AI - Text Analysis Pipeline
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18965657.svg)](https://doi.org/10.5281/zenodo.18965657)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A Python pipeline for analyzing scientific papers using Grobid. This project extracts information from PDF articles and generates word clouds, figure statistics, and link reports.
@@ -21,8 +22,8 @@ A Python pipeline for analyzing scientific papers using Grobid. This project ext
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/albertob1412/Open_science_and_AI.git
-cd Open_science_and_AI
+git clone https://github.com/albertob1412/grobid-paper-analysis.git
+cd grobid-paper-analysis
 ```
 
 ### 2. Create virtual environment
