@@ -9,7 +9,7 @@ authors:
 repository-code: "https://github.com/albertob1412/Open_science_and_AI"
 license: Apache-2.0
 version: "1.0.0"
-doi: "10.5281/zenodo.18941890"
+doi: ""
 date-released: "2025-03-10"
 abstract: "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports."
 keywords:

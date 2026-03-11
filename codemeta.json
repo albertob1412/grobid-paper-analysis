@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "Open Science and AI - Text Analysis Pipeline",
   "description": "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports.",
-  "identifier": "https://doi.org/10.5281/zenodo.18941890",
+  "identifier": "",
   "codeRepository": "https://github.com/albertob1412/Open_science_and_AI",
   "issueTracker": "https://github.com/albertob1412/Open_science_and_AI/issues",
   "downloadUrl": "https://github.com/albertob1412/Open_science_and_AI/releases",
@@ -52,5 +52,5 @@
   ],
   "readme": "https://github.com/albertob1412/Open_science_and_AI/blob/main/README.md",
   "developmentStatus": "active",
-  "referencePublication": "https://doi.org/10.5281/zenodo.18941890"
+  "referencePublication": ""
 }

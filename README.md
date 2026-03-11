@@ -1,21 +1,20 @@
 # Open Science and AI - Text Analysis Pipeline
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18941890.svg)](https://doi.org/10.5281/zenodo.18941890)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-A Python pipeline for analyzing scientific papers using Grobid. This project extracts and analyzes information from PDF articles, generating word clouds, figure statistics, and link reports.
+A Python pipeline for analyzing scientific papers using Grobid. This project extracts information from PDF articles and generates word clouds, figure statistics, and link reports.
 
 ## Features
 
-- **PDF Processing**: Extract structured information from PDFs using Grobid
-- **Word Cloud Generation**: Create a word cloud from paper abstracts
-- **Figure Analysis**: Count and visualize the number of figures per article
-- **Link Extraction**: Extract and list all URLs found in papers
+- PDF processing with Grobid to extract structured text
+- Word cloud generation from paper abstracts
+- Figure counting and visualization per article
+- Link extraction from papers
 
 ## Requirements
 
 - Python 3.11+
-- Docker (for running Grobid)
+- Docker (for Grobid)
 
 ## Installation
 
@@ -26,7 +25,7 @@ git clone https://github.com/albertob1412/Open_science_and_AI.git
 cd Open_science_and_AI
 ```
 
-### 2. Create and activate virtual environment
+### 2. Create virtual environment
 
 ```bash
 python -m venv venv
@@ -44,7 +43,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Start Grobid service
+### 4. Start Grobid
 
 ```bash
 docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.8.0
@@ -54,9 +53,9 @@ docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.8.0
 
 ### Running the complete pipeline
 
-1. Place your PDF files in the `papers/` directory
-2. Make sure Grobid is running (see step 4 above)
-3. Run the main script:
+1. Place PDF files in the `papers/` directory
+2. Make sure Grobid is running
+3. Run:
 
 ```bash
 cd src
@@ -66,66 +65,52 @@ python main.py
 ### Running individual modules
 
 ```bash
-# Extract PDFs to XML
-python src/extract.py
-
-# Generate word cloud
-python src/wordcloud_generator.py
-
-# Count figures
-python src/figures.py
-
-# Extract links
-python src/links.py
+python src/extract.py              # Extract PDFs to XML
+python src/wordcloud_generator.py  # Generate word cloud
+python src/figures.py              # Count figures
+python src/links.py                # Extract links
 ```
 
 ### Running with Docker
 
 ```bash
-# Build the image
 docker build -t os-ai-analysis .
-
-# Run with Grobid on host
 docker run --rm -v $(pwd)/outputs:/app/outputs os-ai-analysis
 ```
 
-## Output
+## Outputs
 
-The pipeline generates the following outputs in the `outputs/` directory:
+The pipeline generates these files in `outputs/`:
 
 | File | Description |
 |------|-------------|
-| `xml/` | Grobid XML files for each paper |
-| `wordcloud.png` | Word cloud generated from abstracts |
-| `figures_chart.png` | Bar chart showing figures per article |
-| `links_report.md` | Markdown report of all links found |
+| `xml/` | Grobid XML files |
+| `wordcloud.png` | Word cloud from abstracts |
+| `figures_chart.png` | Figure count per article |
+| `links_report.md` | List of links found |
 
 ## Project Structure
 
 ```
 Open_science_and_AI/
-├── papers/              # Input PDF files
-├── outputs/             # Generated outputs
+├── papers/              # Input PDFs
+├── outputs/             # Generated results
 ├── src/
-│   ├── __init__.py
-│   ├── main.py          # Main pipeline script
-│   ├── extract.py       # PDF processing with Grobid
-│   ├── wordcloud_generator.py  # Word cloud generation
-│   ├── figures.py       # Figure counting and visualization
-│   └── links.py         # Link extraction
+│   ├── main.py          # Main script
+│   ├── extract.py       # Grobid processing
+│   ├── wordcloud_generator.py
+│   ├── figures.py
+│   └── links.py
 ├── tests/
-│   └── test_analysis.py # Unit tests
+│   └── test_analysis.py
 ├── Dockerfile
 ├── requirements.txt
 ├── codemeta.json
 ├── CITATION.cff
-├── LICENSE
-└── README.md
+└── LICENSE
 ```
 
-## Testing
-
-Run the tests with pytest:
+## Tests
 
 ```bash
 pytest tests/ -v
@@ -133,31 +118,25 @@ pytest tests/ -v
 
 ## Validation
 
-### Word Cloud Validation
-The word cloud is generated from abstracts extracted by Grobid. We validated this by:
-1. Manually checking that extracted abstracts match the original PDFs
-2. Verifying that frequent terms in the word cloud correspond to paper topics
+### Word Cloud
+I validated the word cloud by manually checking that extracted abstracts match the original PDFs, and verifying that the most frequent terms correspond to the paper topics.
 
-### Figure Count Validation
-Figure counts were validated by:
-1. Manually counting figures in a sample of papers
-2. Comparing with Grobid's extracted `<figure>` elements
+### Figure Count
+I validated the figure count by manually comparing figures in some papers with the `<figure>` elements extracted by Grobid.
 
-### Link Extraction Validation
-Links were validated by:
-1. Manually checking a sample of extracted URLs
-2. Verifying that URLs are properly formatted and resolve
+### Link Extraction
+I validated the links by checking a sample of extracted URLs and verifying they have the correct format.
 
 ## Limitations
 
-- Grobid may not correctly parse all PDF formats, especially scanned documents
-- Some figures may be missed if they are not properly tagged in the PDF
-- Link extraction depends on URL patterns and may miss some non-standard URLs
-- The word cloud excludes common stop words but may include some domain-specific common terms
+- Grobid may fail with some PDF formats, especially scanned documents
+- Some figures may not be detected if they are not properly tagged in the PDF
+- Link extraction depends on URL patterns and may miss some non-standard links
+- The word cloud excludes stopwords but may include common domain terms
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+Apache License 2.0 - see [LICENSE](LICENSE)
 
 ## Author
 
