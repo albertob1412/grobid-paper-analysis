@@ -91,10 +91,17 @@ The pipeline generates these files in `outputs/`:
 | `figures_chart.png` | Figure count per article |
 | `links_report.md` | List of links found |
 
+## Configuration
+
+The pipeline can be configured through two files:
+
+- `settings.ini` - Paths for input/output directories
+- `config.json` - Grobid server settings
+
 ## Project Structure
 
 ```
-Open_science_and_AI/
+grobid-paper-analysis/
 ├── papers/              # Input PDFs
 ├── outputs/             # Generated results
 ├── src/
@@ -105,8 +112,11 @@ Open_science_and_AI/
 │   └── links.py
 ├── tests/
 │   └── test_analysis.py
+├── docs/                # Documentation
 ├── Dockerfile
 ├── requirements.txt
+├── settings.ini         # Path configuration
+├── config.json          # Grobid configuration
 ├── codemeta.json
 ├── CITATION.cff
 └── LICENSE
