@@ -75,10 +75,20 @@ python src/links.py                # Extract links
 
 ### Running with Docker
 
+First, make sure Grobid is running:
+
 ```bash
-docker build -t os-ai-analysis .
-docker run --rm -v $(pwd)/outputs:/app/outputs os-ai-analysis
+docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.8.0
 ```
+
+Then build and run the analysis container:
+
+```bash
+docker build -t grobid-analysis .
+docker run --rm --network host -v $(pwd)/outputs:/app/outputs grobid-analysis
+```
+
+Note: `--network host` allows the container to connect to Grobid on localhost.
 
 ## Outputs
 
