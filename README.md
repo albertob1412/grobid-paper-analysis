@@ -1,6 +1,7 @@
 # Open Science and AI - Text Analysis Pipeline
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18965657.svg)](https://doi.org/10.5281/zenodo.18965657)
+[![Documentation](https://img.shields.io/badge/docs-ReadTheDocs-blue)](https://grobid-paper-analysis.readthedocs.io)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
