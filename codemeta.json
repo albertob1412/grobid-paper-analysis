@@ -26,12 +26,19 @@
       "@type": "Person",
       "givenName": "Alberto",
       "familyName": "Barranquero",
+      "email": "alberto.baranquero@alumnos.upm.es",
       "affiliation": {
         "@type": "Organization",
         "name": "Universidad Politecnica de Madrid"
       }
     }
   ],
+  "maintainer": {
+    "@type": "Person",
+    "givenName": "Alberto",
+    "familyName": "Barranquero",
+    "email": "alberto.baranquero@alumnos.upm.es"
+  },
   "keywords": [
     "open science",
     "text analysis",

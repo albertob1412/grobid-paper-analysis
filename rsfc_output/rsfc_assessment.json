@@ -1,0 +1,879 @@
+{
+    "@context": "https://w3id.org/everse/rsqa/0.0.1/",
+    "@type": "SoftwareQualityAssessment",
+    "name": "Quality Assessment for grobid-paper-analysis v1.0.0",
+    "description": "An automated assessment of the grobid-paper-analysis tool based on the EVERSE software quality indicators, run on 2026-03-11.",
+    "dateCreated": "2026-03-11T19:27:05Z",
+    "license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "assessedSoftware": {
+        "@type": "schema:SoftwareApplication",
+        "name": "grobid-paper-analysis",
+        "softwareVersion": "v1.0.0",
+        "url": "https://github.com/albertob1412/grobid-paper-analysis"
+    },
+    "checks": [
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-01-1",
+            "test_name": "There is an identifier and resolves",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for an identifier (i.e. DOI or SWHID) in the README file of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Found the identifier https://doi.org/10.5281/zenodo.18965657 in the README and it resolves",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-01-2",
+            "test_name": "There is an identifier associated with the software",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for an identifier in the CITATION.cff, codemeta.json and README files",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "An identifier was found but could not find it in the following locations: cff",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-01-3",
+            "test_name": "Software identifier follows a proper schema",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if the identifiers associated with the software follow any of these schemas: DOI, URN, GITHUB and SWHID",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "All of the identifiers detected follow a common schema",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-03-1",
+            "test_name": "Software has releases",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/has_releases"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for release tags in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "These releases were found:\n\t- v1.0.0",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-03-2",
+            "test_name": "Releases have an id and version number",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/has_releases"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if all of the releases have an identifier and a version",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "All of the releases have an id and a version",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-03-3",
+            "test_name": "Release versions follow a community established convention",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/versioning_standards_use"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if all of the releases versions follow the SemVer or CalVer versioning standards",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "All of the releases follow a versioning standard",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-03-4",
+            "test_name": "Release identifiers follow the same scheme",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/has_releases"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if all of the version identifiers follow the same scheme",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "All of the releases URLs follow the same scheme",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-03-5",
+            "test_name": "Last release consistency",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/has_releases"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if the latest release tag matches the version stated in the package file of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "error",
+            "evidence": "Could not get the necessary information to perform the test, it being releases and/or version in package file",
+            "suggestions": "None"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-03-6",
+            "test_name": "Version number in metadata",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if a version number for the software is indicated in the CITATION.cff, codemeta.json or package files(i.e. pyproject.toml, pom.xml, etc.)",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Found the software version in one of the specified files",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-04-1",
+            "test_name": "Metadata exists",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for codemeta, citation and package files in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find any of the following metadata files: package_file",
+            "suggestions": "You should describe your software in metadata files. More information at https://everse.software/RSQKit/software_metadata"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-04-2",
+            "test_name": "There is a README",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_documentation"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for a README file in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "There is a README file in the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-04-3",
+            "test_name": "There are title and description",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if there is a title and a description for the software in the metadata",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find a description for the project in the repository",
+            "suggestions": "Remember to add a description to your software's metadata. More information at https://everse.software/RSQKit/software_metadata"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-04-4",
+            "test_name": "Software has descriptive metadata",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for description, programming languages, date of creation and keywords in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find any of the following metadata: description, keywords",
+            "suggestions": "You should describe your software using metadata. More information at https://everse.software/RSQKit/software_metadata"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-04-5",
+            "test_name": "There is a codemeta file",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for a codemeta.json file in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "A codemeta.json file was found in the root of the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-05-1",
+            "test_name": "There is a repostatus badge",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/version_control_use"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for a repo status badge in the README file of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find a repo status badge in the repository",
+            "suggestions": "You should include the state of your repository in the README file"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-05-2",
+            "test_name": "There is contact and/or support metadata",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_documentation"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for contact and support information in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find any of the following information: contact, support, support_channels",
+            "suggestions": "You should include contact information in your software's metadata in case someone wants to ask for information."
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-05-3",
+            "test_name": "Software documentation",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_documentation"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for a README file in the root repository and other forms of documentation such as a Read The Docs badge or url",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Documentation was found in: \t\n- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/README.md",
+            "suggestions": "No suggest"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-06-1",
+            "test_name": "Authors are declared",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for authors in various files of the repository (i.e. CITATION.cff, AUTHORS.md, codemeta.json)",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Authors were found in the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-06-2",
+            "test_name": "Contributors are declared",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for contributors in various files of the repository (i.e. codemeta.json, pyproject.toml, pom.xml)'",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Found authors but could not find any contributors in the repository",
+            "suggestions": "Your software should also document its contributors if there are any. More information at https://everse.software/RSQKit/documenting_software_project"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-06-3",
+            "test_name": "Authors have an ORCID",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if all authors stated in the CITATION.cff file have an ORCID assigned",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "All authors in the codemeta.json file have an orcid identifier",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-06-4",
+            "test_name": "Authors have roles",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if all authors stated in a codemeta.json file have a role assigned ",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "All authors defined in the codemeta file have roles assigned",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-07-1",
+            "test_name": "There is an identifier in README or CITATION.cff",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for an identifier in the README or CITATION.cff files of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "An identifier was found in the README file of the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-07-2",
+            "test_name": "Software identifier resolves to software",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if the identifier found in the README file or metadata files (i.e. codemeta.json, CITATION.cff) resolves to a page that links back to the software repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "The landing page of the software's identifier links back to the software repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-08-1",
+            "test_name": "Metadata record in Software Heritage or Zenodo",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/archived_in_software_heritage"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for Zenodo and Software Heritage badges in the README file of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "A Zenodo DOI identifier was found in the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-09-1",
+            "test_name": "Repository is from Github/Gitlab",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/version_control_use"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if the URL provided is indeed a Github or Gitlab repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "URL provided is a Github or Gitlab repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-12-1",
+            "test_name": "There is an article citation or reference publication",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_citation"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for an article citation or a reference publication in the codemeta and citation files",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "A reference publication was found in the codemeta file of the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-13-1",
+            "test_name": "Dependencies are declared",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/requirements_specified"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for dependencies in project configuration files, README and dependencies files such as requirements.txt",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Requirements were found in:\n\t- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/requirements.txt\n\t- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/docs/requirements.txt\n\t- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/README.md",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-13-2",
+            "test_name": "There are installation instructions",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_documentation"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for installation instructions in the README file of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Installation instructions were found in the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-13-3",
+            "test_name": "Dependencies have version numbers",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/requirements_specified"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if all of the dependencies stated in the machine-readable file (e.g. requirements.txt, pyproject.toml, etc.) of the repository have a version indicated",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "One or more dependencies do not have a version stated",
+            "suggestions": "All of your dependencies should have their versions stated to ensure its reproducibility. More information at https://everse.software/RSQKit/reproducible_software_environments"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-13-4",
+            "test_name": "There is a dependencies machine-readable file",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/requirements_specified"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if dependencies are indicated in a machine-readable file",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "There is a machine-readable file for dependencies",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-14-1",
+            "test_name": "Presence of tests in repository",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_tests"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for files and/or directories that mention test in their names",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Files and/or directories that mention test were found at:\t\n- tests\t\n- tests/__init__.py\t\n- tests/test_analysis.py",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-14-2",
+            "test_name": "There are actions to automate tests",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/repository_workflows"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for workflows that contain test or tests in their names",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find any workflows or actions that mention test in their names",
+            "suggestions": "You should include github actions that run tests to ensure quality. More information at https://everse.software/RSQKit/task_automation_github_actions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-15-1",
+            "test_name": "Software has license",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_license"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for a file named 'LICENSE' or 'LICENSE.md' in the root of the repository.",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "A license was found in:\n\t- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/LICENSE\n\t- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/README.md",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-15-2",
+            "test_name": "License is SPDX compliant",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_license"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if the licenses detected are SPDX compliant",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Licenses are SPDX compliant",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-16-1",
+            "test_name": "License referenced in metadata files",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_license"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for licensing information in the codemeta, citation and package files if they exist",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find any licensing information in the following metadata files: package",
+            "suggestions": "Information about your license should be present in other metadata files like codemeta.json, package files or CITATION. More information on https://everse.software/RSQKit/software_metadata"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-17-1",
+            "test_name": "Repository active",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/version_control_use"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if there is a repo_status badge with value Active and if there are commits in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find a repo status badge in the repository",
+            "suggestions": "You should keep your repository active and indicate it with a repostatus badge"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-17-2",
+            "test_name": "Commit history",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/version_control_use"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if the software repository has a commits history",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Commits were found in the repository",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-17-3",
+            "test_name": "Commits are linked to issues",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/version_control_use"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if there is at least one of the existing issues (opened or closed) referenced in any of the commits made in the default branch of the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not get the necessary information to perform the test, it being the commits record or repository issues",
+            "suggestions": "Don't forget to make commits of your source code to your git repository and issues to improve version control. More information at https://everse.software/RSQKit/using_version_control"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-18-1",
+            "test_name": "Repository has citation",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/software_has_citation"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for a CITATION.cff file and README file in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "A citation was found in:\n\t- https://raw.githubusercontent.com/albertob1412/grobid-paper-analysis/main/CITATION.cff",
+            "suggestions": "No suggestions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-19-1",
+            "test_name": "Repository has workflows",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/repository_workflows"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Searches for workflows in the repository",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "false",
+            "evidence": "Could not find any workflows in the repository",
+            "suggestions": "Your software should include workflows to automate tasks. More information at https://everse.software/RSQKit/task_automation_github_actions"
+        },
+        {
+            "@type": "CheckResult",
+            "test_id": "https://w3id.org/rsfc/test/RSFC-20-1",
+            "test_name": "Repository has an issue tracker",
+            "assessesIndicator": {
+                "@id": "https://w3id.org/everse/i/indicators/support_issue_tracking"
+            },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "RSFC",
+                "@id": "https://w3id.org/rsfc/",
+                "softwareVersion": "0.1.2"
+            },
+            "process": "Checks if there is an issue tracker in the repository.",
+            "status": {
+                "@id": "schema:CompletedActionStatus"
+            },
+            "output": "true",
+            "evidence": "Found an issue tracker in the repository",
+            "suggestions": "No suggestions"
+        }
+    ]
+}
