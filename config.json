@@ -1,0 +1,10 @@
+{
+    "grobid_server": "http://localhost:8070",
+    "timeout": 180,
+    "sleep_time": 3,
+    "coordinates": [
+        "figure",
+        "ref",
+        "biblStruct"
+    ]
+}
