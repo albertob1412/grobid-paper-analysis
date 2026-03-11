@@ -3,7 +3,7 @@
     "@type": "SoftwareQualityAssessment",
     "name": "Quality Assessment for grobid-paper-analysis v1.0.0",
     "description": "An automated assessment of the grobid-paper-analysis tool based on the EVERSE software quality indicators, run on 2026-03-11.",
-    "dateCreated": "2026-03-11T19:45:39Z",
+    "dateCreated": "2026-03-11T19:49:54Z",
     "license": {
         "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
     },
@@ -409,9 +409,9 @@
             "status": {
                 "@id": "schema:CompletedActionStatus"
             },
-            "output": "false",
-            "evidence": "Found authors but could not find any contributors in the repository",
-            "suggestions": "Your software should also document its contributors if there are any. More information at https://everse.software/RSQKit/documenting_software_project"
+            "output": "true",
+            "evidence": "Found contributors metadata in the codemeta or package files",
+            "suggestions": "No suggestions"
         },
         {
             "@type": "CheckResult",
