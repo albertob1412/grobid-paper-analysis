@@ -1,6 +1,7 @@
 """
 Main script to run the complete analysis pipeline.
 """
+import configparser
 from pathlib import Path
 
 from extract import process_all_pdfs
@@ -9,12 +10,34 @@ from figures import count_all_figures, visualize_figures
 from links import extract_all_links, save_links_report
 
 
+def load_settings():
+    """Load settings from settings.ini file."""
+    base_dir = Path(__file__).parent.parent
+    settings_path = base_dir / "settings.ini"
+
+    config = configparser.ConfigParser()
+
+    if settings_path.exists():
+        config.read(settings_path)
+        return {
+            "input": base_dir / config.get("paths", "input", fallback="./papers"),
+            "grobid_output": base_dir / config.get("paths", "grobid_output", fallback="./outputs/xml"),
+            "results": base_dir / config.get("paths", "results", fallback="./outputs")
+        }
+
+    return {
+        "input": base_dir / "papers",
+        "grobid_output": base_dir / "outputs" / "xml",
+        "results": base_dir / "outputs"
+    }
+
+
 def main():
     """Run the complete analysis pipeline."""
-    base_dir = Path(__file__).parent.parent
-    papers_dir = base_dir / "papers"
-    outputs_dir = base_dir / "outputs"
-    xml_dir = outputs_dir / "xml"
+    settings = load_settings()
+    papers_dir = settings["input"]
+    xml_dir = settings["grobid_output"]
+    outputs_dir = settings["results"]
 
     print("=" * 60)
     print("OPEN SCIENCE AND AI - TEXT ANALYSIS PIPELINE")
