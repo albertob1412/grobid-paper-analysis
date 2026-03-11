@@ -1,0 +1,7 @@
+site_name: Grobid Paper Analysis
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - Usage: usage.md
+theme:
+  name: material
