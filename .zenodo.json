@@ -1,0 +1,19 @@
+{
+    "title": "Open Science and AI - Text Analysis Pipeline",
+    "description": "A Python pipeline for analyzing scientific papers using Grobid, generating word clouds, figure statistics, and link reports.",
+    "creators": [
+        {
+            "name": "Barranquero, Alberto",
+            "affiliation": "Universidad Politecnica de Madrid"
+        }
+    ],
+    "keywords": [
+        "open science",
+        "text analysis",
+        "grobid",
+        "research software",
+        "FAIR"
+    ],
+    "license": "Apache-2.0",
+    "upload_type": "software"
+}

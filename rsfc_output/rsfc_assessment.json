@@ -3,7 +3,7 @@
     "@type": "SoftwareQualityAssessment",
     "name": "Quality Assessment for grobid-paper-analysis v1.0.0",
     "description": "An automated assessment of the grobid-paper-analysis tool based on the EVERSE software quality indicators, run on 2026-03-11.",
-    "dateCreated": "2026-03-11T19:27:05Z",
+    "dateCreated": "2026-03-11T19:45:39Z",
     "license": {
         "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
     },
@@ -325,9 +325,9 @@
             "status": {
                 "@id": "schema:CompletedActionStatus"
             },
-            "output": "false",
-            "evidence": "Could not find a repo status badge in the repository",
-            "suggestions": "You should include the state of your repository in the README file"
+            "output": "true",
+            "evidence": "A repo status badge was found in the repository",
+            "suggestions": "No suggestions"
         },
         {
             "@type": "CheckResult",

@@ -39,6 +39,15 @@
     "familyName": "Barranquero",
     "email": "alberto.baranquero@alumnos.upm.es"
   },
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Alberto",
+      "familyName": "Barranquero",
+      "email": "alberto.baranquero@alumnos.upm.es"
+    }
+  ],
+  "support": "https://github.com/albertob1412/grobid-paper-analysis/issues",
   "keywords": [
     "open science",
     "text analysis",
